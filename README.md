@@ -5,6 +5,7 @@ Macro to create cut_views in FreeCAD
 This macro provides a graphical user interface (GUI) in FreeCAD to automate the creation of cut views for assemblies or parts. 
 It is designed to streamline the workflow for generating sectional views by guiding the user through a series of selections and actions. 
 The macro is modular and interacts with other scripts for group structure creation, link management, cube generation, and cut operations.
+<img src="images/009_Assembly.png" width="1100" alt="Overview of a cutview"/>
 <img src="images/011_Assembly.png" width="1100" alt="Overview of a cutview"/>
 
 
