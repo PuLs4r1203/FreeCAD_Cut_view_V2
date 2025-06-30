@@ -5,6 +5,8 @@ Macro to create cut_views in FreeCAD
 This macro provides a graphical user interface (GUI) in FreeCAD to automate the creation of cut views for assemblies or parts. 
 It is designed to streamline the workflow for generating sectional views by guiding the user through a series of selections and actions. 
 The macro is modular and interacts with other scripts for group structure creation, link management, cube generation, and cut operations.
+<img src="images/011_Assembly.png" width="1100" alt="Overview of a cutview"/>
+
 
 Features:
 ---------
@@ -42,11 +44,42 @@ Usage:
 1. Deactivate the part or assembly to avoid circular references.
 2. Create a plane for the cut.
 3. Run this macro in FreeCAD.
-4. Use the GUI to select a plane and a body from the 3D view or the tree.
-5. Assign a letter for the cutview and store it (the letter will be used for group naming).
-6. Select the desired cube size (required for the cut operation).
-7. Click the appropriate buttons to create the group structure, links, cubes, and cuts, or use the "Create Cutview" button to perform all steps automatically.
-8. If the cut is in the wrong direction, select the plane, reverse it, and recompute everything.
+
+The blank Taskwindow---------->
+<img src="images/030_Task-panel.png" width="400" alt="The blank Taskwindow"/>
+
+5. Use the GUI to select a plane and a body from the 3D view or the tree.
+6. Assign a letter for the cutview and store it (the letter will be used for group naming).
+7. Select the desired cube size (required for the cut operation).
+
+The fully selected Taskwindow-->
+<img src="images/031_Task-panel.png" width="400" alt="The Taskwindow, fully selected"/>
+
+8. Click the "Create Cutview" button to perform the cutview.
+<img src="images/011_Assembly.png" width="1100" alt="The created cutview in 3D-view"/>
+<img src="images/021_Model-tree.png" width="400" alt="The created cutview in the tree-view"/>
+
+9. You can also show more cutviews at the same time, so it shows 90°-cut (toggle the visibility with the space button).
+<img src="images/012_Assembly.png" width="1100" alt="Two cuts shown at the same time = 90°-cut"/>
+
+10. If the cut is in the wrong direction, select the plane, reverse it, and recompute everything.
+
+
+Installation:
+-------------
+1. Copy all the following `.py` files into your FreeCAD macros directory:
+   
+   `C:\Users\<YourUsername>\AppData\Roaming\FreeCAD\Macro`
+   
+   - A010_create_Cutviews.py
+   - A020_create_group_structure.py
+   - A030_create_links.py
+   - A040_create_cubes.py
+   - A050_create_cuts.py
+
+2. In FreeCAD, open the Macro dialog and run only `A010_create_Cutviews.py`.
+   
+   The other scripts will be called automatically by `A010_create_Cutviews.py` as needed. You do not need to run them manually.
 
 
 Dependencies:
